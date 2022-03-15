@@ -1,1 +1,1 @@
-[https://raw.githubusercontent.com/Eliminater74/Eliminater74/2225cd21eaf91cb8a7844feb16285fae3d01610e/github-metrics.svg](https://raw.githubusercontent.com/Eliminater74/Eliminater74/2225cd21eaf91cb8a7844feb16285fae3d01610e/github-metrics.svg)
+!\[Metrics\](/github-metrics.svg)
