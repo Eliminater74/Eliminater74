@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ Eliminater74 / Michael Harrell ⚡
+# ⚡ Eliminater74 / Michael H. ⚡
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=800&center=true&vCenter=true&width=900&lines=Android+Systems+Developer;ROM+%2F+Kernel+Engineer;Reverse+Engineering+%2F+APK+Analysis;IPTV+Platform+Development;VR+%2F+Immersive+Apps;Automation+%2F+GitHub+Actions" />
 
