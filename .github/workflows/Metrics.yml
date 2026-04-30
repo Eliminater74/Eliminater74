@@ -1,62 +1,66 @@
 name: Metrics
+
 on:
-  # Schedule daily updates
-  schedule: [{cron: "0 0 * * *"}]
-  # (optional) Run workflow manually
+  schedule:
+    - cron: "0 0 * * *"
   workflow_dispatch:
-  # (optional) Run workflow when pushing on master/main
-  push: {branches: ["master", "main"]}
+  push:
+    branches:
+      - main
+
 jobs:
-  github-metrics-personal:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-      - name: Personal metrics
-        uses: lowlighter/metrics@master
+      - name: Main profile metrics
+        uses: lowlighter/metrics@latest
         with:
-          filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: Eliminater74
+          filename: github-metrics.svg
+          template: classic
+          base: header, activity, community, repositories, metadata
           config_timezone: America/New_York
-          config_order: base.header, isocalendar, base.repositories, followup, pagespeed, people
-          config_padding: 10%
-          use_prebuilt_image: master
-          base: "header, repositories"
           plugin_isocalendar: yes
-          #          plugin_isocalendar_duration: full-year
-          plugin_lines: yes
-          plugin_traffic: yes
-
-          plugin_followup: yes
-
-          plugin_pagespeed: no
-          plugin_pagespeed_screenshot: yes
-          plugin_pagespeed_url: 
-          plugin_people: yes
-          plugin_people_types: followers, following
-          plugin_people_limit: 28
-          plugin_people_size: 28
-      - name: Personal metrics (additional)
-        uses: lowlighter/metrics@master
-        with:
-          filename: metrics.additional.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          user: Eliminater74
-          config_timezone: America/New_York
-          config_order: habits, stargazers, languages, stargazers, topics
-          config_padding: 10%
-          use_prebuilt_image: master
-          base: ""
+          plugin_isocalendar_duration: full-year
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
           plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_facts: no
           plugin_habits_charts: yes
-          plugin_stargazers: yes
+          plugin_habits_facts: yes
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_repositories: yes
+          plugin_repositories_featured: Eliminater74/Eliminater74
 
+      - name: Languages metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Eliminater74
+          filename: metrics.languages.svg
+          template: classic
+          base: ""
+          config_timezone: America/New_York
           plugin_languages: yes
-          plugin_languages_ignored: html, css, tex, less, makefile, qmake, lex, cmake, gnuplot
-          plugin_languages_skipped: lowlighter
+          plugin_languages_indepth: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 0%
 
-          plugin_topics: yes
-          plugin_topics_mode: mastered
+      - name: Calendar metrics
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Eliminater74
+          filename: metrics.calendar.svg
+          template: classic
+          base: ""
+          config_timezone: America/New_York
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
