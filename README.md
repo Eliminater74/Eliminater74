@@ -1,4 +1,4 @@
-<h1 align="center">Michael Harrell / Eliminater74</h1>
+<h1 align="center">Eliminater74</h1>
 
 <p align="center">
   Android Developer • ROM/Kernel Builder • Reverse Engineering • IPTV/App Dev • Automation
