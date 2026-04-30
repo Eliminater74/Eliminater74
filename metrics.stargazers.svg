@@ -1,0 +1,1825 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="814" class="">
+
+  <defs><style/></defs>
+  <style data-optimizable="true">/* SVG global context */
+  svg {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    font-size: 14px;
+    color: #777777;
+  }
+
+/* Large SVG context */
+  svg.large .largeable {
+    width: 474px;
+  }
+  svg.large .largeable &gt; .row {
+    width: 100%;
+  }
+  svg.large .largeable-align-start {
+    align-items: flex-start;
+  }
+  svg.large .column.largeable, svg.large .row.largeable, svg.large .largeable-inline-flex {
+    display: inline-flex;
+  }
+  svg.large .largeable-flex-wrap, svg.large .largeable-column-fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  svg.large .largeable-column-fields &gt; .field {
+    width: 230px;
+  }
+  svg.large .chart.largeable {
+    width: 458px;
+  }
+  svg.large .largeable-width-auto {
+    width: auto;
+  }
+  svg.large .largeable-width-half {
+    width: 50%;
+  }
+
+/* Columns display */
+  svg.columns .items-wrapper{
+    column-count: 2;
+    column-gap: 10px;
+  }
+  svg.columns .items-wrapper&gt;*{
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+  }
+
+  @media (max-width: 850px){
+    svg.columns .items-wrapper{
+      column-count: 1;
+    }
+  }
+
+/* Headers */
+  h1, h2, h3 {
+    margin: 8px 0 2px;
+    padding: 0;
+    color: #0366d6;
+    font-weight: normal;
+  }
+  h1 svg, h2 svg, h3 svg {
+    fill: currentColor;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .h-details {
+    margin: 0 4px;
+    padding-top: 4px;
+    font-size: 0.8rem;
+  }
+
+/* Fields */
+  section &gt; .field {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    white-space: nowrap;
+  }
+  .field.wrap {
+    flex-wrap: wrap;
+  }
+  .field svg {
+    margin: 0 8px;
+    fill: #959da5;
+    flex-shrink: 0;
+  }
+  .field.error {
+    color: #cb2431;
+  }
+  .field.error svg {
+    fill: #cb2431;
+  }
+  .field.warning {
+    color: #D79533;
+  }
+  .field.warning svg {
+    fill: #D79533;
+  }
+
+/* Displays */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row section {
+    flex: 1 1 0;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .center {
+    justify-content: center;
+  }
+  .horizontal {
+    justify-content: space-around;
+  }
+  .horizontal-wrap {
+    flex-wrap: wrap;
+  }
+  .horizontal .field {
+    flex: 1 1 0;
+  }
+  .no-wrap {
+    white-space: nowrap;
+  }
+  .fill-width {
+    width: 100%;
+  }
+  .margin-bottom {
+    margin-bottom: 16px;
+  }
+  .no-margin-top {
+    margin-top: 0px;
+  }
+  .margin-lr-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* User avatar */
+  .avatar {
+    border-radius: 50%;
+    margin: 0 6px;
+  }
+
+  .organization.avatar {
+    border-radius: 15%;
+  }
+
+  .organization.name {
+    white-space: nowrap;
+  }
+
+  .organization.contributions {
+    margin: 0 8px;
+    flex-wrap: wrap;
+  }
+
+  .contribution.organization {
+    display: flex;
+    border: 1px solid #959da5;
+    border-radius: 6px;
+    padding: 2px 6px;
+    padding-left: 0;
+    margin: 2px;
+    font-size: 12px;
+    background-color: #959da520;
+  }
+  .contribution.organization.s {
+    color: #EB355E;
+    background-color: #EB355E26;
+    border-color: #EB355E;
+  }
+  .contribution.organization.a {
+    color: #D79533;
+    background-color: #E7BD6926;
+    border-color: #E7BD69;
+  }
+  .contribution.organization.b {
+    color: #9D8FFF;
+    background-color: #9E91FF26;
+    border-color: #9E91FF;
+  }
+  .contribution.organization.c {
+    color: #58A6FF;
+    background-color: #58A6FF26;
+    border-color: #58A6FF;
+  }
+  .contribution .gauge-base, .contribution .gauge-arc {
+    stroke: currentColor;
+    stroke-width: 4;
+  }
+  .contribution .gauge text {
+    fill: currentColor;
+    font-size: 13px;
+  }
+  .contribution .gauge {
+    margin: 0 6px;
+    color: inherit;
+    transform: scale(1.4) translateY(1px);
+  }
+  .contribution .icon {
+    fill: currentColor;
+    width: 10px;
+    height: 10px;
+    margin-left: -9px;
+    margin-top: 8px;
+    color: inherit;
+    filter: brightness(.5);
+  }
+  .contribution.s .side {
+    background-color: #EB355E26;
+  }
+  .contribution.a .side {
+    background-color: #E7BD6926;
+  }
+  .contribution.b .side {
+    background-color: #9E91FF26;
+  }
+  .contribution.c .side {
+    background-color: #58A6FF26;
+  }
+
+  .contribution.organization .avatar {
+    margin: 0 4px;
+  }
+
+/* Commit calendar */
+  .calendar.field {
+    margin: 4px 0;
+    margin-left: 7px;
+  }
+  .calendar .day {
+    outline: 1px solid rgba(27,31,35,.04);
+    outline-offset: -1px;
+  }
+
+/* Progress bars */
+  svg.bar {
+    margin: 4px 0;
+  }
+
+/* Language */
+  .field.language {
+    margin: 0 8px;
+    flex-grow: 0;
+  }
+
+  .field.language.details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .field.language.details small {
+    display: flex;
+    justify-content: space-between;
+    color: #666666;
+    text-align: right;
+  }
+
+  .field.language.details &gt; *, .field.language.details small &gt; * {
+    flex: 1 1 0;
+  }
+  .field.language.details small &gt; *:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  .footnote {
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 12px;
+  }
+  .footnote.warning {
+    color: #D79533;
+  }
+  .footnote.warning svg {
+    fill: #D79533;
+  }
+
+/* Follow-up */
+  .followup.legend {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .followup.legend .field {
+    width: 46%;
+    justify-content: flex-start;
+    margin-left: 8px;
+  }
+  .followup.legend svg {
+    margin: 0 3px;
+    width: 14px;
+    height: 14px;
+  }
+  .followup.legend svg:first-child {
+    margin-left: 0;
+  }
+  .followup.legend svg:last-child {
+    margin-right: 0;
+  }
+  .followup-title{
+    white-space: initial;
+  }
+
+/* Labels */
+  .label {
+    background-color: #58A6FF30;
+    color: #0366D6;
+    padding: 0 10px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 2px 5px;
+    white-space: nowrap;
+    border-radius: 32px;
+    font-size: 12px;
+  }
+  .label.label-flex {
+    display: flex;
+    align-items: center;
+  }
+  .label .label-right {
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    margin-left: 6px;
+    margin-right: -10px;
+    background-color: #58A6FF10;
+    padding: 0 7px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+  .label .twemoji {
+    margin-top: .25em;
+    margin-left: 0px;
+  }
+
+/* Habits */
+  .habits .facts {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 37px;
+  }
+
+/* Footer */
+  footer {
+    margin-top: 8px;
+    font-size: 10px;
+    font-style: italic;
+    color: #666666;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4px;
+  }
+
+/* Speed test categories */
+  .categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4px;
+  }
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0;
+  }
+
+/* Gauges */
+  .gauge {
+    stroke-linecap: round;
+    fill: none;
+  }
+  .gauge.high {
+    color: #18b663;
+  }
+  .gauge.average {
+    color: #fb8c00;
+  }
+  .gauge.low {
+    color: #e53935;
+  }
+  .gauge.info {
+    color: #58A6FF;
+  }
+  .gauge-base, .gauge-arc {
+    stroke: currentColor;
+    stroke-width: 10;
+  }
+  .gauge-base {
+    stroke-opacity: .2;
+  }
+  .gauge-arc {
+    fill: none;
+    stroke-dashoffset: 0;
+    animation-delay: 250ms;
+    animation: animation-gauge 1s ease forwards
+  }
+  .gauge text {
+    fill: currentColor;
+    font-size: 40px;
+    font-family: monospace;
+    text-anchor: middle;
+    font-weight: 600;
+  }
+  .gauge text.secondary {
+    fill: currentColor;
+    font-size: 25px;
+    font-family: monospace;
+    text-anchor: middle;
+  }
+  .gauge .title {
+    font-size: 18px;
+    color: #777777;
+  }
+  @keyframes animation-gauge {
+    from {
+      stroke-dasharray: 0 329;
+    }
+  }
+  .audits {
+    margin-top: 8px;
+  }
+  .audit.text {
+    min-width: 42px;
+  }
+  .audit svg {
+    margin: 0;
+  }
+  .audit.high {
+    fill: #18b663;
+  }
+  .audit.average {
+    fill: #fb8c00;
+  }
+  .audit.low {
+    fill: #e53935;
+  }
+
+  .screenshot {
+    width: 452px;
+    height: 315px;
+    margin: 8px 14px 4px;
+    border-radius: 5px;
+  }
+  .screenshot-content {
+    margin-left: 12px;
+  }
+
+  svg.large .audits {
+    display: inline-flex;
+    width: 474px;
+  }
+  svg.large .audits section:last-child &gt; .field {
+    justify-content: right;
+  }
+  svg.large .screenshot {
+    width: 904px;
+    height: 630px;
+  }
+
+/* Music plugin */
+  .tracklist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 28px;
+    margin-top: 4px;
+    width: 100%;
+  }
+  .track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+  .track img {
+    margin: 0 10px;
+    border-radius: 7px;
+    flex-shrink: 0;
+  }
+  .track .name {
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    font-weight: 600;
+  }
+  .track .name, .track .artist {
+    width: 387px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .track .artist, .track .played-at {
+    font-size: 12px;
+    color: #666666;
+  }
+  .track .infos {
+    flex-grow: 1;
+  }
+  svg.large .tracklist {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+/* Posts plugin */
+  .post {
+    align-items: flex-start;
+  }
+  .post .infos {
+    display: flex;
+    margin-bottom: 4px;
+  }
+  .post .infos .left {
+    flex-shrink: 0;
+    font-size: 12px;
+    color: #666666;
+    width: 72px;
+    padding-top: 1px;
+    text-align: center;
+  }
+  .post .infos .cover {
+    width: 100%;
+    height: 56px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .post .infos .right {
+    width: 376px;
+    padding-left: 4px;
+  }
+  .post .infos .title, .post .infos .description {
+    font-size: 14px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 38px;
+    /* May not work in all browsers */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .post .infos .description {
+    margin-top: 3px;
+    font-size: 12px;
+    max-height: 48px;
+    color: #666666;
+    -webkit-line-clamp: 3;
+  }
+
+/* Topics */
+  .topics {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .topics img {
+    border-radius: 5px;
+    margin: 4px;
+  }
+
+/* Tweets */
+  .tweet {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 18px;
+    border-left: 3px solid #777777B2;
+    padding-left: 6px;
+  }
+
+  .tweet .mention, .tweet .link, .tweet .hashtag {
+    color: #0366d6;
+  }
+
+  .tweet .date {
+    margin: 6px 0;
+    font-size: 12px;
+    color: #666666;
+  }
+
+  .tweet .attachments {
+    display: flex;
+    width: 450px;
+    margin-top: 8px;
+  }
+
+  .tweet .attachments &gt; div {
+    flex: 1 1 0;
+    width: 0;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    margin: 2px;
+    box-shadow: 0px 0px 1px #777777A0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .tweet .attachments .infos {
+    background-color: #000000D0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .tweet .attachments .infos &gt; div {
+    margin: 4px 8px 0;
+  }
+
+  .tweet .attachments .infos .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tweet .attachments .infos .description {
+    font-size: 11px;
+    color: #666666;
+  }
+
+/* Charts and graphs */
+  .chart {
+    padding: 0 8px;
+  }
+
+  .chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 8px 0 4px;
+    flex-grow: 1;
+    min-height: 70px;
+  }
+
+  .chart-bars .entry {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #666666;
+  }
+
+  .chart-bars .entry .value {
+    font-size: 6px;
+  }
+
+  .chart-bars .entry .empty {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chart-bars .bar {
+    width: 7px;
+    background-color: var(--color-calendar-graph-day-bg);
+    border: 1px solid var(--color-calendar-graph-day-border);
+    border-radius: 5px;
+  }
+
+  .chart-bars.horizontal {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .chart-bars.horizontal .entry {
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    min-height: 1rem;
+  }
+
+  .chart-bars.horizontal .entry .name {
+    flex-shrink: 0;
+    text-align: right;
+    width: 34%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .chart-bars .entry .bottom {
+    margin-bottom: -1rem;
+    line-height: 1rem;
+  }
+
+  .chart-bars.horizontal .bar {
+    height: 7px;
+    width: auto;
+    margin: 0 6px;
+  }
+
+/* Repository */
+  .repository {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .repository .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 440px;
+  }
+
+  .repository .name span:first-child {
+    color: #58a6ff;
+  }
+
+  .repository .name span:last-child {
+    color: #666666;
+    font-size: 10px;
+  }
+
+  .repository .description {
+    display: block;
+    width: 440px;
+    white-space: normal;
+  }
+
+  .repository .description, .repository .infos {
+    color: #666666;
+    margin-left: 38px;
+    font-size: 13px;
+  }
+
+  .repository .infos &gt; div {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+
+  .repository .infos svg {
+    margin: 0;
+    margin-right: 4px;
+  }
+
+/* Activity */
+  .activity {
+    margin-bottom: 12px;
+  }
+
+  .activity .field {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 450px;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+
+  .activity .field .content {
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .activity .repo, .activity .issue, .activity .commit .sha {
+    display: inline;
+    color: #58a6ff;
+  }
+
+  .activity .code {
+    background-color: #7777771F;
+    padding: 1px 5px;
+    font-size: 80%;
+    border-radius: 6px;
+    color: #777777;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    margin: 0 4px -3px;
+  }
+
+  .activity .bold, .activity .user {
+    font-weight: 600;
+  }
+
+  .activity .details, .activity .timestamp {
+    padding-left: 38px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #666666;
+  }
+
+  .activity .timestamp {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+
+  .activity .commit {
+    display: flex;
+    align-items: center;
+  }
+
+  .activity .commit .sha {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    margin-right: 4px;
+  }
+
+  .activity .commit .message {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 360px;
+    white-space: nowrap;
+  }
+
+  .activity .details &gt; .comment {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 420px;
+    margin-top: 6px;
+    border-left: 3px solid #777777B2;
+    padding-left: 6px;
+    /* May not work in all browsers */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  svg.large .activity .field {
+    max-width: 900px;
+  }
+
+/* Calendar */
+  svg.calendar {
+    margin-left: 13px;
+    margin-top: 4px;
+  }
+
+  svg.calendar text {
+    font-size: 18px;
+    fill: currentColor;
+  }
+
+/* Diff stats */
+  .diff-handle {
+    color: #58a6ff;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .large .diff-handle {
+    max-width: 400px;
+  }
+  .diff-box {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 1px;
+    background-color: rgba(110, 118, 129, 0.4);
+    border: 1px solid rgba(246, 240, 251, 0.1);
+  }
+  .diff-box:first-child {
+    margin-left: 9px;
+  }
+  .diff-box.added {
+    background-color: rgb(63, 185, 80);
+  }
+  .diff-box.deleted {
+    background-color: rgb(218, 54, 51);
+  }
+  .diff-stats {
+    margin-left: 4px;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .added {
+    color: rgb(63, 185, 80);
+  }
+  .deleted {
+    color: rgb(218, 54, 51);
+  }
+
+/* People */
+  .people {
+    padding: 0 10px;
+  }
+
+  .people .avatar {
+    margin: 0 2px;
+  }
+
+/* Projects */
+  .project .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 420px;
+    margin-left: 37px;
+    max-height: 38px;
+    font-size: 12px;
+    white-space: normal;
+    /* May not work in all browsers */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .project .items, .project-items {
+    padding-left: 11px;
+  }
+  .project .items .text, .project-items .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 426px;
+  }
+  .large .project .items .text, .large .project-items .text {
+    width: 916px;
+  }
+
+/* Star lists */
+  .starlist {
+    padding-left: 28px;
+    width: 460px;
+  }
+  .starlist &gt; .description, .starlist &gt; .count {
+    margin-left: 32px;
+  }
+  .starlist &gt; .count {
+    font-size: 12px;
+    color: #666666;
+  }
+  .starlist .repositories {
+    margin-left: -5px;
+    margin-bottom: 20px;
+  }
+  .starlist .repository {
+    margin: 6px 0 0;
+  }
+  .starlist .repository .description, .starlist .repository .infos {
+    font-size: 11px;
+  }
+  .starlist .repository .name {
+    font-size: 14px;
+  }
+  .starlist .languages {
+    margin-top: 6px;
+    padding-left: 13px;
+  }
+  .starlist .languages svg.bar {
+    margin-left: 18px;
+  }
+
+/* Anilist */
+  .anilist {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 28px;
+    margin-top: 4px;
+  }
+
+  .anilist .media {
+    display: flex;
+    margin-bottom: 4px;
+    width: 450px;
+  }
+  .anilist .media img {
+    margin: 0 10px;
+    border-radius: 7px;
+  }
+
+  .anilist .media .about {
+    flex-grow: 1;
+  }
+  .anilist .media .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 14px;
+    color: #58a6ff;
+  }
+  .anilist .media .infos {
+    font-size: 12px;
+    color: #666666;
+  }
+  .anilist .media .infos &gt; div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .anilist .media .infos svg {
+    fill: currentColor;
+    height: 12px;
+    width: 12px;
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  .anilist .media .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 380px;
+    max-height: 38px;
+    font-size: 12px;
+    white-space: normal;
+    /* May not work in all browsers */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .anilist .characters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .anilist .characters img {
+    margin: 2px;
+    border-radius: 7px;
+  }
+
+/* Steam */
+  .steam .games {
+    margin-left: 28px;
+  }
+  .steam .media {
+    display: flex;
+    margin-bottom: 4px;
+    width: 450px;
+  }
+  .steam .media img {
+    margin: 0 10px;
+    border-radius: 7px;
+  }
+  .steam .media &gt; img {
+    height: 32px;
+    width: 32px;
+  }
+  .steam .media .about {
+    flex-grow: 1;
+  }
+  .steam .media .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 14px;
+    color: #58a6ff;
+  }
+  .steam .media .infos {
+    font-size: 12px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .steam .media .infos &gt; div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .steam .media .infos svg {
+    fill: currentColor;
+    height: 12px;
+    width: 12px;
+    margin: 0;
+    margin-right: 4px;
+  }
+  .steam .media .achievement img {
+    height: 22px;
+    width: 22px;
+    margin-right: 6px;
+  }
+  .steam .media .achievement .name {
+    display: flex;
+    justify-content: space-between;
+  }
+  .steam .media .achievement .name &gt; div:first-child {
+    max-width: 280px;
+  }
+  .steam .media .achievement .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 344px;
+    max-height: 38px;
+    font-size: 12px;
+    white-space: normal;
+    /* May not work in all browsers */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .steam .media .achievement .unlocked {
+    font-size: 12px;
+    color: #666666;
+    font-style: italic;
+    flex-shrink: 0;
+  }
+  .steam .media .achievement .ellipsis {
+    margin-left: 18px;
+  }
+
+/* Licenses */
+  .licenses {
+    display: flex;
+  }
+  .licenses .column {
+    align-items: flex-start;
+    font-size: 12px;
+    color: #666666;
+    flex-shrink: 0;
+  }
+  .licenses-details {
+    margin-top: 8px;
+  }
+  .field.license.details {
+    display: flex;
+    justify-content: space-between;
+  }
+  .field.license.details small {
+    display: flex;
+    justify-content: space-between;
+    color: #666666;
+    text-align: right;
+  }
+  .licenses .column:nth-child(1) {
+    margin-left: 13px;
+    width: 25%;
+  }
+  .licenses .column:nth-child(2) {
+    width: 25%;
+  }
+  .licenses .column:nth-child(3) {
+    width: 50%;
+  }
+  .licenses .column svg {
+    height: 12px;
+    width: 12px;
+  }
+  .licenses .column .title {
+    font-weight: 600;
+    margin-left: 15px;
+  }
+  .licenses .column .permission svg {
+    fill: #56d364;
+  }
+  .licenses .column .limitation svg {
+    fill: #f85149;
+  }
+  .licenses .column .condition svg {
+    fill: #58a6ff;
+  }
+
+/* Contributors */
+  .contributors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6px;
+  }
+  .contributors .label {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+  }
+  .contributors .label img {
+    margin-left: 0;
+  }
+  .contributors .contributions {
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    margin-left: 6px;
+    margin-right: -10px;
+    background-color: #58A6FF10;
+    padding: 0 7px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+  .contributors .contributions svg {
+    fill: #0366D6;
+    margin-left: 4px;
+    width: .8rem;
+    height: .8rem;
+  }
+  .field.contributors-category {
+    margin-left: 12px;
+  }
+  .contributors-categories img {
+    margin-right: 0;
+  }
+
+/* Introduction and sponsors */
+  .introduction, .sponsors {
+    white-space: normal;
+    margin: 0 13px 2px;
+  }
+  .sponsors.goal {
+    padding: 6px 8px;
+    border-radius: 5px;
+    background-color: #7777771F;
+  }
+  .sponsors .goal-text, .sponsors .past-text {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .sponsors .past-text {
+    margin: 8px 0 2px;
+  }
+  .sponsors .avatar {
+    margin: 2px;
+  }
+  .sponsorships.goal {
+    display: flex;
+    align-items: center;
+  }
+  .sponsorships.goal .bold {
+    font-weight: bold;
+  }
+  .sponsorships.goal img {
+    width: 38px;
+    margin-right: 8px;
+  }
+
+/* Stackoverflow */
+  .stackoverflow {
+    margin-left: 38px;
+  }
+  .stackoverflow .entry {
+    margin: 4px 0 12px;
+  }
+  .stackoverflow .title {
+    color: #58a6ff;
+    white-space: normal;
+    align-items: flex-start;
+  }
+  .stackoverflow .body, .stackoverflow .infos {
+    color: #666666;
+    font-size: 13px;
+    margin-left: 32px;
+  }
+  .stackoverflow .infos {
+    display: flex;
+    align-items: center;
+  }
+  .stackoverflow .infos &gt; div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .stackoverflow .infos svg {
+    fill: currentColor;
+    height: 12px;
+    width: 12px;
+    margin: 0;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+  .stackoverflow .body {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-left: 3px solid #777777B2;
+    padding-left: 6px;
+    width: 400px;
+  }
+
+/* Achievements */
+  .achievement {
+    display: flex;
+    margin: 4px 0;
+  }
+  .achievement .icon {
+    margin: 0 4px;
+    width: 44px;
+    height: 44px;
+  }
+  .achievement .text {
+    font-size: 12px;
+    color: #666666;
+  }
+  .achievement .unlock {
+    font-size: 9px;
+    color: #666666;
+  }
+  .achievement .title {
+    font-size: 14px;
+    color: #58A6FF;
+  }
+  .achievement .gauge.info {
+    color: #58A6FF;
+  }
+  .achievement .value {
+    background-color: #58A6FF26;
+  }
+  .achievement.x .title {
+    color: #666666;
+  }
+  .achievement.x .gauge.info {
+    color: #B0B0B0;
+  }
+  .achievement.x .value {
+    background-color: #B0B0B026;
+  }
+  .achievement.b .title {
+    color: #9D8FFF;
+  }
+  .achievement.b .gauge.info {
+    color: #9E91FF;
+  }
+  .achievement.b .value {
+    background-color: #9E91FF26;
+  }
+  .achievement.a .title {
+    color: #D79533;
+  }
+  .achievement.a .gauge.info {
+    color: #E7BD69;
+  }
+  .achievement.a .value {
+    background-color: #E7BD6926;
+  }
+  .achievement.s .title {
+    color: #EB355E;
+  }
+  .achievement.s .gauge.info {
+    color: #EB355E;
+  }
+  .achievement.s .value {
+    background-color: #EB355E26;
+  }
+  .achievement.secret .title{
+    color: #FF76CD;
+  }
+  .achievement.secret .gauge.info {
+    color: #FF79D1;
+  }
+  .achievement.secret .value {
+    background-color: #FF79D126;
+  }
+  .achievement .gh, .achievement .value {
+    border: 1px solid currentColor;
+    border-radius: 16px;
+    font-size: 10px;
+    padding: 0 5px;
+    white-space: nowrap;
+  }
+  .achievement .gauge-base, .achievement .gauge-arc {
+    stroke-width: 6;
+  }
+  .achievement .value-wrapper {
+    margin-bottom: -50px;
+    margin-top: 36px;
+    display: none;
+  }
+  .achievement .value {
+    margin-left: 46px;
+  }
+  .achievements.compact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .achievements.compact .achievement {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80px;
+  }
+  .achievements.compact .info {
+    width: 100%;
+  }
+  .achievements.compact .achievement .title {
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .achievements.compact .achievement .title .prefix {
+    min-height: 13px;
+    font-size: 10px;
+    display: block;
+    margin-bottom: -.25rem;
+  }
+  .achievements.compact .achievement .value-wrapper {
+    display: flex;
+  }
+  .achievements.compact .achievement .text, .achievements.compact .achievement .gh {
+    display: none;
+  }
+
+/* RSS feed */
+  .rss {
+    align-items: flex-start;
+  }
+  .rss .infos {
+    margin-bottom: 3px;
+  }
+  .rss .infos .date {
+    font-size: 10px;
+    color: #666666;
+  }
+
+/* Skyline */
+  .skyline-animation {
+    margin: 2px 13px 6px;
+    border-radius: 10px;
+    background-color: #030D21;
+    overflow: hidden;
+  }
+
+/* LeetCode */
+  .leetcode.subsection {
+    padding-left: 28px;
+  }
+  .leetcode .topics {
+    margin-left: 20px;
+  }
+  .leetcode .count {
+    font-size: 10px;
+    color: #666666;
+  }
+  .leetcode .fundamental .dot, .leetcode .easy.gauge .gauge-arc {
+    color: #2CBB5D;
+  }
+  .leetcode .intermediate .dot, .leetcode .medium.gauge .gauge-arc {
+    color: #FFC01E;
+  }
+  .leetcode .advanced .dot, .leetcode .hard.gauge .gauge-arc {
+    color: #EF4743;
+  }
+  .leetcode .all.gauge .gauge-arc {
+    color: rgb(255, 161, 22);
+  }
+  .leetcode {
+    align-items: flex-start;
+  }
+  .leetcode .infos {
+    margin-bottom: 3px;
+  }
+  .leetcode .infos .date {
+    font-size: 10px;
+    color: #666666;
+  }
+
+/* Code snippet */
+  .snippet .body {
+    padding-left: 12px;
+  }
+  .snippet .language-diff {
+    font-size: 77%;
+  }
+  .snippet.additions {
+    color: #336543;
+  }
+  .snippet.deletions {
+    color: #9A5256;
+  }
+  .snippet .token.prefix.unchanged {
+    visibility: hidden;
+  }
+
+/* Markdown and syntax highlighting */
+  .markdown b, .markdown i {
+    display: inline-block;
+    width: 97%;
+  }
+  .markdown p {
+    margin: 8px 0;
+  }
+  .markdown ul {
+    padding-left: 24px;
+  }
+  .markdown a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+  .markdown blockquote {
+    border-left: 4px solid #7777771F;
+    color: #777777;
+    margin: 0;
+    padding-left: 16px;
+  }
+  code {
+    background-color: #7777771F;
+    display: inline-block;
+    border-radius: 6px;
+    color: #777777;
+    padding: 1px 5px;
+    font-size: 80%;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  }
+  code[class^=language-] {
+    white-space: pre-wrap;
+    width: 97%;
+    margin-top: 4px;
+  }
+  span.code {
+    background-color: #7777771F;
+    padding: 1px 5px;
+    font-size: 80%;
+    border-radius: 6px;
+    color: #777777;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    margin: 0 4px -3px;
+  }
+  .token.comment {
+    color: #669900;
+  }
+  .token.punctuation {
+    color: #8a93a8;
+  }
+  .token.namespace, .token.constant, .token.symbol, .token.keyword {
+    color: #b44418;
+  }
+  .token.regex, .token.string, .token.char, .token.number, .token.boolean {
+    color: #2777AA;
+  }
+  .token.property, .token.tag {
+    color: #48428a;
+  }
+  .token.builtin, .token.operator {
+    color: #106cbc;
+  }
+  .token.trimmed {
+    font-style: italic;
+    color: #77777760;
+  }
+  .token.coord {
+    color: #D2A8FF;
+    font-weight: bold;
+  }
+  .token.inserted:not(.prefix) {
+    color: #AAD0B4DC;
+    background-color: #336543DC;
+  }
+  .token.deleted:not(.prefix) {
+    color: #EED2D0DC;
+    background-color: #9A5256DC;
+  }
+
+/* Typography */
+  .space {
+    margin-left: 7px;
+  }
+  .blue {
+    color: #58a6ff;
+  }
+
+/* Charts */
+  .ct-chart {
+    display: flex;
+    margin-left: -12px;
+  }
+  .ct-chart-pie .ct-label {
+    fill: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  .ct-line {
+    stroke-width: 2px !important;
+    stroke: #58A6FF !important;
+  }
+  .ct-point {
+    stroke: #106cbc !important;
+    stroke-width: 2px !important;
+  }
+  .ct-area {
+    fill: #58A6FF !important;
+  }
+  .ct-label {
+    fill: rgba(127, 127, 127, 0.8) !important;
+    color: rgba(127, 127, 127, 0.8) !important;
+  }
+  .ct-label.ct-horizontal {
+    text-anchor: middle !important;
+  }
+  .ct-grid {
+    stroke: rgba(127, 127, 127, 0.4) !important;
+  }
+
+/* Autosize */
+  .autosize {
+    width: auto;
+    height: auto;
+  }
+
+/* Twemoji and GitHub emoji */
+  .twemoji, .gemoji {
+    height: 1em;
+    width: 1em;
+    margin-bottom: -.125em;
+  }
+  .label-flex .gemoji {
+    margin-right: .25rem;
+  }
+
+/* Cake day */
+  .cakeday, .cakeday svg {
+    animation: animation-rainbow 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+  }
+
+/* Rainbow animation */
+  @keyframes animation-rainbow {
+    0%, 100%{ color: #7F00FF; fill: #7F00FF; }
+    14% { color: #A933FF; fill: #A933FF; }
+    29%{ color: #007FFF; fill: #007FFF; }
+    43%{ color: #00FF7F; fill: #00FF7F; }
+		57%{ color: #FFFF00; fill: #FFFF00; }
+		71%{ color: #FF7F00; fill: #FF7F00; }
+		86%{ color: #FF0000; fill: #FF0000; }
+  }
+
+/* Calendar */
+  :root {
+    --color-calendar-graph-day-bg: #ebedf0;
+    --color-calendar-graph-day-border: rgba(27,31,35,0.06);
+    --color-calendar-graph-day-L1-bg: #9be9a8;
+    --color-calendar-graph-day-L2-bg: #40c463;
+    --color-calendar-graph-day-L3-bg: #30a14e;
+    --color-calendar-graph-day-L4-bg: #216e39;
+    --color-calendar-halloween-graph-day-L1-bg: #ffee4a;
+    --color-calendar-halloween-graph-day-L2-bg: #ffc501;
+    --color-calendar-halloween-graph-day-L3-bg: #fe9600;
+    --color-calendar-halloween-graph-day-L4-bg: #03001c;
+    --color-calendar-winter-graph-day-L1-bg: #0a3069;
+    --color-calendar-winter-graph-day-L2-bg: #0969da;
+    --color-calendar-winter-graph-day-L3-bg: #54aeff;
+    --color-calendar-winter-graph-day-L4-bg: #b6e3ff;
+    --color-calendar-graph-day-L4-border: rgba(27,31,35,0.06);
+    --color-calendar-graph-day-L3-border: rgba(27,31,35,0.06);
+    --color-calendar-graph-day-L2-border: rgba(27,31,35,0.06);
+    --color-calendar-graph-day-L1-border: rgba(27,31,35,0.06);
+  }
+
+/* End delimiter */
+  #metrics-end {
+    width: 100%;
+  }
+
+  .no-animations * {
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    animation-delay: -0.0001s !important;
+    animation-duration: 0s !important;
+    animation-play-state: paused !important;
+    caret-color: transparent !important;
+  }
+</style>
+  <style/>
+
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
+      
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+
+      
+        
+      
+        
+      
+        
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+
+      
+        
+      
+        
+
+      
+        
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+
+      
+        
+      
+        
+      
+        
+  <section class="stargazers">
+    <h2 class="field">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/></svg>
+      Stargazers
+    </h2>
+    
+      
+        <div class="row margin-bottom">
+          <section class="column chart">
+            <h3>Total stargazers</h3>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="480" height="315"><g transform="translate(10,270)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="rgba(127, 127, 127, .8)" d="M10.5,0.5H460.5"/><g class="tick" opacity="1" transform="translate(10.706043956043954,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">May</text></g><g class="tick" opacity="1" transform="translate(49.03021978021978,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">June</text></g><g class="tick" opacity="1" transform="translate(86.11813186813187,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">July</text></g><g class="tick" opacity="1" transform="translate(124.44230769230768,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">August</text></g><g class="tick" opacity="1" transform="translate(162.76648351648353,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">September</text></g><g class="tick" opacity="1" transform="translate(199.85439560439562,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">October</text></g><g class="tick" opacity="1" transform="translate(238.17857142857144,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">November</text></g><g class="tick" opacity="1" transform="translate(275.3179945054945,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">December</text></g><g class="tick" opacity="1" transform="translate(313.6421703296703,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">2026</text></g><g class="tick" opacity="1" transform="translate(351.96634615384613,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">February</text></g><g class="tick" opacity="1" transform="translate(386.58173076923083,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">March</text></g><g class="tick" opacity="1" transform="translate(424.8543956043956,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">April</text></g></g><g transform="translate(10,10)" fill="none" font-size="10" font-family="sans-serif" text-anchor="start"><g class="tick" opacity="1" transform="translate(0,135.5)"><line stroke="currentColor" x2="460" stroke-opacity="0.5" stroke-dasharray="2,2"/><text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">0</text></g></g><path transform="translate(10,10)" d="M10,135L11.236,135L12.473,135L13.709,135L14.945,135L16.181,135L17.418,135L18.654,135L19.89,135L21.126,135L22.363,135L23.599,135L24.835,135L26.071,135L27.308,135L28.544,135L29.78,135L31.016,135L32.253,135L33.489,135L34.725,135L35.962,135L37.198,135L38.434,135L39.67,135L40.907,135L42.143,135L43.379,135L44.615,135L45.852,135L47.088,135L48.324,135L49.56,135L50.797,135L52.033,135L53.269,135L54.505,135L55.742,135L56.978,135L58.214,135L59.451,135L60.687,135L61.923,135L63.159,135L64.396,135L65.632,135L66.868,135L68.104,135L69.341,135L70.577,135L71.813,135L73.049,135L74.286,135L75.522,135L76.758,135L77.995,135L79.231,135L80.467,135L81.703,135L82.94,135L84.176,135L85.412,135L86.648,135L87.885,135L89.121,135L90.357,135L91.593,135L92.83,135L94.066,135L95.302,135L96.538,135L97.775,135L99.011,135L100.247,135L101.484,135L102.72,135L103.956,135L105.192,135L106.429,135L107.665,135L108.901,135L110.137,135L111.374,135L112.61,135L113.846,135L115.082,135L116.319,135L117.555,135L118.791,135L120.027,135L121.264,135L122.5,135L123.736,135L124.973,135L126.209,135L127.445,135L128.681,135L129.918,135L131.154,135L132.39,135L133.626,135L134.863,135L136.099,135L137.335,135L138.571,135L139.808,135L141.044,135L142.28,135L143.516,135L144.753,135L145.989,135L147.225,135L148.462,135L149.698,135L150.934,135L152.17,135L153.407,135L154.643,135L155.879,135L157.115,135L158.352,135L159.588,135L160.824,135L162.06,135L163.297,135L164.533,135L165.769,135L167.005,135L168.242,135L169.478,135L170.714,135L171.951,135L173.187,135L174.423,135L175.659,135L176.896,135L178.132,135L179.368,135L180.604,135L181.841,135L183.077,135L184.313,135L185.549,135L186.786,135L188.022,135L189.258,135L190.495,135L191.731,135L192.967,135L194.203,135L195.44,135L196.676,135L197.912,135L199.148,135L200.385,135L201.621,135L202.857,135L204.093,135L205.33,135L206.566,135L207.802,135L209.038,135L210.275,135L211.511,135L212.747,135L213.984,135L215.22,135L216.456,135L217.692,135L218.929,135L220.165,135L221.401,135L222.637,135L223.874,135L225.11,135L226.346,135L227.582,135L228.819,135L230.055,135L231.291,135L232.527,135L233.764,135L235,135L236.236,135L237.473,135L238.709,135L239.945,135L241.181,135L242.418,135L243.654,135L244.89,135L246.126,135L247.363,135L248.599,135L249.835,135L251.071,135L252.308,135L253.544,135L254.78,135L256.016,135L257.253,135L258.489,135L259.725,135L260.962,135L262.198,135L263.434,135L264.67,135L265.907,135L267.143,135L268.379,135L269.615,135L270.852,135L272.088,135L273.324,135L274.56,135L275.797,135L277.033,135L278.269,135L279.505,135L280.742,135L281.978,135L283.214,135L284.451,135L285.687,135L286.923,135L288.159,135L289.396,135L290.632,135L291.868,135L293.104,135L294.341,135L295.577,135L296.813,135L298.049,135L299.286,135L300.522,135L301.758,135L302.995,135L304.231,135L305.467,135L306.703,135L307.94,135L309.176,135L310.412,135L311.648,135L312.885,135L314.121,135L315.357,135L316.593,135L317.83,135L319.066,135L320.302,135L321.538,135L322.775,135L324.011,135L325.247,135L326.484,135L327.72,135L328.956,135L330.192,135L331.429,135L332.665,135L333.901,135L335.137,135L336.374,135L337.61,135L338.846,135L340.082,135L341.319,135L342.555,135L343.791,135L345.027,135L346.264,135L347.5,135L348.736,135L349.973,135L351.209,135L352.445,135L353.681,135L354.918,135L356.154,135L357.39,135L358.626,135L359.863,135L361.099,135L362.335,135L363.571,135L364.808,135L366.044,135L367.28,135L368.516,135L369.753,135L370.989,135L372.225,135L373.462,135L374.698,135L375.934,135L377.17,135L378.407,135L379.643,135L380.879,135L382.115,135L383.352,135L384.588,135L385.824,135L387.06,135L388.297,135L389.533,135L390.769,135L392.005,135L393.242,135L394.478,135L395.714,135L396.951,135L398.187,135L399.423,135L400.659,135L401.896,135L403.132,135L404.368,135L405.604,135L406.841,135L408.077,135L409.313,135L410.549,135L411.786,135L413.022,135L414.258,135L415.495,135L416.731,135L417.967,135L419.203,135L420.44,135L421.676,135L422.912,135L424.148,135L425.385,135L426.621,135L427.857,135L429.093,135L430.33,135L431.566,135L432.802,135L434.038,135L435.275,135L436.511,135L437.747,135L438.984,135L440.22,135L441.456,135L442.692,135L443.929,135L445.165,135L446.401,135L447.637,135L448.874,135L450.11,135L451.346,135L452.582,135L453.819,135L455.055,135L456.291,135L457.527,135L458.764,135L460,135" fill="transparent" stroke="#87ceeb" stroke-width="2"/><path transform="translate(10,10)" d="M10,135L11.236,135L12.473,135L13.709,135L14.945,135L16.181,135L17.418,135L18.654,135L19.89,135L21.126,135L22.363,135L23.599,135L24.835,135L26.071,135L27.308,135L28.544,135L29.78,135L31.016,135L32.253,135L33.489,135L34.725,135L35.962,135L37.198,135L38.434,135L39.67,135L40.907,135L42.143,135L43.379,135L44.615,135L45.852,135L47.088,135L48.324,135L49.56,135L50.797,135L52.033,135L53.269,135L54.505,135L55.742,135L56.978,135L58.214,135L59.451,135L60.687,135L61.923,135L63.159,135L64.396,135L65.632,135L66.868,135L68.104,135L69.341,135L70.577,135L71.813,135L73.049,135L74.286,135L75.522,135L76.758,135L77.995,135L79.231,135L80.467,135L81.703,135L82.94,135L84.176,135L85.412,135L86.648,135L87.885,135L89.121,135L90.357,135L91.593,135L92.83,135L94.066,135L95.302,135L96.538,135L97.775,135L99.011,135L100.247,135L101.484,135L102.72,135L103.956,135L105.192,135L106.429,135L107.665,135L108.901,135L110.137,135L111.374,135L112.61,135L113.846,135L115.082,135L116.319,135L117.555,135L118.791,135L120.027,135L121.264,135L122.5,135L123.736,135L124.973,135L126.209,135L127.445,135L128.681,135L129.918,135L131.154,135L132.39,135L133.626,135L134.863,135L136.099,135L137.335,135L138.571,135L139.808,135L141.044,135L142.28,135L143.516,135L144.753,135L145.989,135L147.225,135L148.462,135L149.698,135L150.934,135L152.17,135L153.407,135L154.643,135L155.879,135L157.115,135L158.352,135L159.588,135L160.824,135L162.06,135L163.297,135L164.533,135L165.769,135L167.005,135L168.242,135L169.478,135L170.714,135L171.951,135L173.187,135L174.423,135L175.659,135L176.896,135L178.132,135L179.368,135L180.604,135L181.841,135L183.077,135L184.313,135L185.549,135L186.786,135L188.022,135L189.258,135L190.495,135L191.731,135L192.967,135L194.203,135L195.44,135L196.676,135L197.912,135L199.148,135L200.385,135L201.621,135L202.857,135L204.093,135L205.33,135L206.566,135L207.802,135L209.038,135L210.275,135L211.511,135L212.747,135L213.984,135L215.22,135L216.456,135L217.692,135L218.929,135L220.165,135L221.401,135L222.637,135L223.874,135L225.11,135L226.346,135L227.582,135L228.819,135L230.055,135L231.291,135L232.527,135L233.764,135L235,135L236.236,135L237.473,135L238.709,135L239.945,135L241.181,135L242.418,135L243.654,135L244.89,135L246.126,135L247.363,135L248.599,135L249.835,135L251.071,135L252.308,135L253.544,135L254.78,135L256.016,135L257.253,135L258.489,135L259.725,135L260.962,135L262.198,135L263.434,135L264.67,135L265.907,135L267.143,135L268.379,135L269.615,135L270.852,135L272.088,135L273.324,135L274.56,135L275.797,135L277.033,135L278.269,135L279.505,135L280.742,135L281.978,135L283.214,135L284.451,135L285.687,135L286.923,135L288.159,135L289.396,135L290.632,135L291.868,135L293.104,135L294.341,135L295.577,135L296.813,135L298.049,135L299.286,135L300.522,135L301.758,135L302.995,135L304.231,135L305.467,135L306.703,135L307.94,135L309.176,135L310.412,135L311.648,135L312.885,135L314.121,135L315.357,135L316.593,135L317.83,135L319.066,135L320.302,135L321.538,135L322.775,135L324.011,135L325.247,135L326.484,135L327.72,135L328.956,135L330.192,135L331.429,135L332.665,135L333.901,135L335.137,135L336.374,135L337.61,135L338.846,135L340.082,135L341.319,135L342.555,135L343.791,135L345.027,135L346.264,135L347.5,135L348.736,135L349.973,135L351.209,135L352.445,135L353.681,135L354.918,135L356.154,135L357.39,135L358.626,135L359.863,135L361.099,135L362.335,135L363.571,135L364.808,135L366.044,135L367.28,135L368.516,135L369.753,135L370.989,135L372.225,135L373.462,135L374.698,135L375.934,135L377.17,135L378.407,135L379.643,135L380.879,135L382.115,135L383.352,135L384.588,135L385.824,135L387.06,135L388.297,135L389.533,135L390.769,135L392.005,135L393.242,135L394.478,135L395.714,135L396.951,135L398.187,135L399.423,135L400.659,135L401.896,135L403.132,135L404.368,135L405.604,135L406.841,135L408.077,135L409.313,135L410.549,135L411.786,135L413.022,135L414.258,135L415.495,135L416.731,135L417.967,135L419.203,135L420.44,135L421.676,135L422.912,135L424.148,135L425.385,135L426.621,135L427.857,135L429.093,135L430.33,135L431.566,135L432.802,135L434.038,135L435.275,135L436.511,135L437.747,135L438.984,135L440.22,135L441.456,135L442.692,135L443.929,135L445.165,135L446.401,135L447.637,135L448.874,135L450.11,135L451.346,135L452.582,135L453.819,135L455.055,135L456.291,135L457.527,135L458.764,135L460,135L460,135L458.764,135L457.527,135L456.291,135L455.055,135L453.819,135L452.582,135L451.346,135L450.11,135L448.874,135L447.637,135L446.401,135L445.165,135L443.929,135L442.692,135L441.456,135L440.22,135L438.984,135L437.747,135L436.511,135L435.275,135L434.038,135L432.802,135L431.566,135L430.33,135L429.093,135L427.857,135L426.621,135L425.385,135L424.148,135L422.912,135L421.676,135L420.44,135L419.203,135L417.967,135L416.731,135L415.495,135L414.258,135L413.022,135L411.786,135L410.549,135L409.313,135L408.077,135L406.841,135L405.604,135L404.368,135L403.132,135L401.896,135L400.659,135L399.423,135L398.187,135L396.951,135L395.714,135L394.478,135L393.242,135L392.005,135L390.769,135L389.533,135L388.297,135L387.06,135L385.824,135L384.588,135L383.352,135L382.115,135L380.879,135L379.643,135L378.407,135L377.17,135L375.934,135L374.698,135L373.462,135L372.225,135L370.989,135L369.753,135L368.516,135L367.28,135L366.044,135L364.808,135L363.571,135L362.335,135L361.099,135L359.863,135L358.626,135L357.39,135L356.154,135L354.918,135L353.681,135L352.445,135L351.209,135L349.973,135L348.736,135L347.5,135L346.264,135L345.027,135L343.791,135L342.555,135L341.319,135L340.082,135L338.846,135L337.61,135L336.374,135L335.137,135L333.901,135L332.665,135L331.429,135L330.192,135L328.956,135L327.72,135L326.484,135L325.247,135L324.011,135L322.775,135L321.538,135L320.302,135L319.066,135L317.83,135L316.593,135L315.357,135L314.121,135L312.885,135L311.648,135L310.412,135L309.176,135L307.94,135L306.703,135L305.467,135L304.231,135L302.995,135L301.758,135L300.522,135L299.286,135L298.049,135L296.813,135L295.577,135L294.341,135L293.104,135L291.868,135L290.632,135L289.396,135L288.159,135L286.923,135L285.687,135L284.451,135L283.214,135L281.978,135L280.742,135L279.505,135L278.269,135L277.033,135L275.797,135L274.56,135L273.324,135L272.088,135L270.852,135L269.615,135L268.379,135L267.143,135L265.907,135L264.67,135L263.434,135L262.198,135L260.962,135L259.725,135L258.489,135L257.253,135L256.016,135L254.78,135L253.544,135L252.308,135L251.071,135L249.835,135L248.599,135L247.363,135L246.126,135L244.89,135L243.654,135L242.418,135L241.181,135L239.945,135L238.709,135L237.473,135L236.236,135L235,135L233.764,135L232.527,135L231.291,135L230.055,135L228.819,135L227.582,135L226.346,135L225.11,135L223.874,135L222.637,135L221.401,135L220.165,135L218.929,135L217.692,135L216.456,135L215.22,135L213.984,135L212.747,135L211.511,135L210.275,135L209.038,135L207.802,135L206.566,135L205.33,135L204.093,135L202.857,135L201.621,135L200.385,135L199.148,135L197.912,135L196.676,135L195.44,135L194.203,135L192.967,135L191.731,135L190.495,135L189.258,135L188.022,135L186.786,135L185.549,135L184.313,135L183.077,135L181.841,135L180.604,135L179.368,135L178.132,135L176.896,135L175.659,135L174.423,135L173.187,135L171.951,135L170.714,135L169.478,135L168.242,135L167.005,135L165.769,135L164.533,135L163.297,135L162.06,135L160.824,135L159.588,135L158.352,135L157.115,135L155.879,135L154.643,135L153.407,135L152.17,135L150.934,135L149.698,135L148.462,135L147.225,135L145.989,135L144.753,135L143.516,135L142.28,135L141.044,135L139.808,135L138.571,135L137.335,135L136.099,135L134.863,135L133.626,135L132.39,135L131.154,135L129.918,135L128.681,135L127.445,135L126.209,135L124.973,135L123.736,135L122.5,135L121.264,135L120.027,135L118.791,135L117.555,135L116.319,135L115.082,135L113.846,135L112.61,135L111.374,135L110.137,135L108.901,135L107.665,135L106.429,135L105.192,135L103.956,135L102.72,135L101.484,135L100.247,135L99.011,135L97.775,135L96.538,135L95.302,135L94.066,135L92.83,135L91.593,135L90.357,135L89.121,135L87.885,135L86.648,135L85.412,135L84.176,135L82.94,135L81.703,135L80.467,135L79.231,135L77.995,135L76.758,135L75.522,135L74.286,135L73.049,135L71.813,135L70.577,135L69.341,135L68.104,135L66.868,135L65.632,135L64.396,135L63.159,135L61.923,135L60.687,135L59.451,135L58.214,135L56.978,135L55.742,135L54.505,135L53.269,135L52.033,135L50.797,135L49.56,135L48.324,135L47.088,135L45.852,135L44.615,135L43.379,135L42.143,135L40.907,135L39.67,135L38.434,135L37.198,135L35.962,135L34.725,135L33.489,135L32.253,135L31.016,135L29.78,135L28.544,135L27.308,135L26.071,135L24.835,135L23.599,135L22.363,135L21.126,135L19.89,135L18.654,135L17.418,135L16.181,135L14.945,135L13.709,135L12.473,135L11.236,135L10,135Z" fill="rgba(88, 166, 255, .1)"/><g><circle transform="translate(10,10)" cx="10" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="48.324175824175825" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="85.41208791208791" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="123.73626373626374" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="162.06043956043956" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="199.14835164835165" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="237.47252747252747" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="274.5604395604396" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="312.8846153846154" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="351.2087912087912" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="385.8241758241758" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="424.14835164835165" cy="135" r="2" fill="#106cbc"/></g><g fill="currentColor" text-anchor="middle" font-family="sans-serif" font-size="10" stroke="rgba(88, 166, 255, .05)" stroke-linejoin="round" stroke-width="4" paint-order="stroke fill"><text transform="translate(10,6)" x="10" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="48.324175824175825" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="85.41208791208791" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="123.73626373626374" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="162.06043956043956" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="199.14835164835165" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="237.47252747252747" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="274.5604395604396" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="312.8846153846154" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="351.2087912087912" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="385.8241758241758" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="424.14835164835165" y="135" fill="rgba(127, 127, 127, .8)">0</text></g></svg>
+            
+          </section>
+          <section class="column chart">
+            <h3>New stargazers per day</h3>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" width="480" height="315"><g transform="translate(10,270)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="rgba(127, 127, 127, .8)" d="M10.5,0.5H460.5"/><g class="tick" opacity="1" transform="translate(10.706043956043954,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">May</text></g><g class="tick" opacity="1" transform="translate(49.03021978021978,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">June</text></g><g class="tick" opacity="1" transform="translate(86.11813186813187,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">July</text></g><g class="tick" opacity="1" transform="translate(124.44230769230768,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">August</text></g><g class="tick" opacity="1" transform="translate(162.76648351648353,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">September</text></g><g class="tick" opacity="1" transform="translate(199.85439560439562,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">October</text></g><g class="tick" opacity="1" transform="translate(238.17857142857144,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">November</text></g><g class="tick" opacity="1" transform="translate(275.3179945054945,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">December</text></g><g class="tick" opacity="1" transform="translate(313.6421703296703,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">2026</text></g><g class="tick" opacity="1" transform="translate(351.96634615384613,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">February</text></g><g class="tick" opacity="1" transform="translate(386.58173076923083,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">March</text></g><g class="tick" opacity="1" transform="translate(424.8543956043956,0)"><line stroke="currentColor" y2="6" stroke-opacity="0.5"/><text fill="rgba(127, 127, 127, .8)" y="9" dy="0.71em" transform="translate(-5,5) rotate(-45)" style="text-anchor: end;">April</text></g></g><g transform="translate(10,10)" fill="none" font-size="10" font-family="sans-serif" text-anchor="start"><g class="tick" opacity="1" transform="translate(0,135.5)"><line stroke="currentColor" x2="460" stroke-opacity="0.5" stroke-dasharray="2,2"/><text fill="rgba(127, 127, 127, .8)" x="0" dy="-4">0</text></g></g><path transform="translate(10,10)" d="M10,135L11.236,135L12.473,135L13.709,135L14.945,135L16.181,135L17.418,135L18.654,135L19.89,135L21.126,135L22.363,135L23.599,135L24.835,135L26.071,135L27.308,135L28.544,135L29.78,135L31.016,135L32.253,135L33.489,135L34.725,135L35.962,135L37.198,135L38.434,135L39.67,135L40.907,135L42.143,135L43.379,135L44.615,135L45.852,135L47.088,135L48.324,135L49.56,135L50.797,135L52.033,135L53.269,135L54.505,135L55.742,135L56.978,135L58.214,135L59.451,135L60.687,135L61.923,135L63.159,135L64.396,135L65.632,135L66.868,135L68.104,135L69.341,135L70.577,135L71.813,135L73.049,135L74.286,135L75.522,135L76.758,135L77.995,135L79.231,135L80.467,135L81.703,135L82.94,135L84.176,135L85.412,135L86.648,135L87.885,135L89.121,135L90.357,135L91.593,135L92.83,135L94.066,135L95.302,135L96.538,135L97.775,135L99.011,135L100.247,135L101.484,135L102.72,135L103.956,135L105.192,135L106.429,135L107.665,135L108.901,135L110.137,135L111.374,135L112.61,135L113.846,135L115.082,135L116.319,135L117.555,135L118.791,135L120.027,135L121.264,135L122.5,135L123.736,135L124.973,135L126.209,135L127.445,135L128.681,135L129.918,135L131.154,135L132.39,135L133.626,135L134.863,135L136.099,135L137.335,135L138.571,135L139.808,135L141.044,135L142.28,135L143.516,135L144.753,135L145.989,135L147.225,135L148.462,135L149.698,135L150.934,135L152.17,135L153.407,135L154.643,135L155.879,135L157.115,135L158.352,135L159.588,135L160.824,135L162.06,135L163.297,135L164.533,135L165.769,135L167.005,135L168.242,135L169.478,135L170.714,135L171.951,135L173.187,135L174.423,135L175.659,135L176.896,135L178.132,135L179.368,135L180.604,135L181.841,135L183.077,135L184.313,135L185.549,135L186.786,135L188.022,135L189.258,135L190.495,135L191.731,135L192.967,135L194.203,135L195.44,135L196.676,135L197.912,135L199.148,135L200.385,135L201.621,135L202.857,135L204.093,135L205.33,135L206.566,135L207.802,135L209.038,135L210.275,135L211.511,135L212.747,135L213.984,135L215.22,135L216.456,135L217.692,135L218.929,135L220.165,135L221.401,135L222.637,135L223.874,135L225.11,135L226.346,135L227.582,135L228.819,135L230.055,135L231.291,135L232.527,135L233.764,135L235,135L236.236,135L237.473,135L238.709,135L239.945,135L241.181,135L242.418,135L243.654,135L244.89,135L246.126,135L247.363,135L248.599,135L249.835,135L251.071,135L252.308,135L253.544,135L254.78,135L256.016,135L257.253,135L258.489,135L259.725,135L260.962,135L262.198,135L263.434,135L264.67,135L265.907,135L267.143,135L268.379,135L269.615,135L270.852,135L272.088,135L273.324,135L274.56,135L275.797,135L277.033,135L278.269,135L279.505,135L280.742,135L281.978,135L283.214,135L284.451,135L285.687,135L286.923,135L288.159,135L289.396,135L290.632,135L291.868,135L293.104,135L294.341,135L295.577,135L296.813,135L298.049,135L299.286,135L300.522,135L301.758,135L302.995,135L304.231,135L305.467,135L306.703,135L307.94,135L309.176,135L310.412,135L311.648,135L312.885,135L314.121,135L315.357,135L316.593,135L317.83,135L319.066,135L320.302,135L321.538,135L322.775,135L324.011,135L325.247,135L326.484,135L327.72,135L328.956,135L330.192,135L331.429,135L332.665,135L333.901,135L335.137,135L336.374,135L337.61,135L338.846,135L340.082,135L341.319,135L342.555,135L343.791,135L345.027,135L346.264,135L347.5,135L348.736,135L349.973,135L351.209,135L352.445,135L353.681,135L354.918,135L356.154,135L357.39,135L358.626,135L359.863,135L361.099,135L362.335,135L363.571,135L364.808,135L366.044,135L367.28,135L368.516,135L369.753,135L370.989,135L372.225,135L373.462,135L374.698,135L375.934,135L377.17,135L378.407,135L379.643,135L380.879,135L382.115,135L383.352,135L384.588,135L385.824,135L387.06,135L388.297,135L389.533,135L390.769,135L392.005,135L393.242,135L394.478,135L395.714,135L396.951,135L398.187,135L399.423,135L400.659,135L401.896,135L403.132,135L404.368,135L405.604,135L406.841,135L408.077,135L409.313,135L410.549,135L411.786,135L413.022,135L414.258,135L415.495,135L416.731,135L417.967,135L419.203,135L420.44,135L421.676,135L422.912,135L424.148,135L425.385,135L426.621,135L427.857,135L429.093,135L430.33,135L431.566,135L432.802,135L434.038,135L435.275,135L436.511,135L437.747,135L438.984,135L440.22,135L441.456,135L442.692,135L443.929,135L445.165,135L446.401,135L447.637,135L448.874,135L450.11,135L451.346,135L452.582,135L453.819,135L455.055,135L456.291,135L457.527,135L458.764,135L460,135" fill="transparent" stroke="#87ceeb" stroke-width="2"/><path transform="translate(10,10)" d="M10,135L11.236,135L12.473,135L13.709,135L14.945,135L16.181,135L17.418,135L18.654,135L19.89,135L21.126,135L22.363,135L23.599,135L24.835,135L26.071,135L27.308,135L28.544,135L29.78,135L31.016,135L32.253,135L33.489,135L34.725,135L35.962,135L37.198,135L38.434,135L39.67,135L40.907,135L42.143,135L43.379,135L44.615,135L45.852,135L47.088,135L48.324,135L49.56,135L50.797,135L52.033,135L53.269,135L54.505,135L55.742,135L56.978,135L58.214,135L59.451,135L60.687,135L61.923,135L63.159,135L64.396,135L65.632,135L66.868,135L68.104,135L69.341,135L70.577,135L71.813,135L73.049,135L74.286,135L75.522,135L76.758,135L77.995,135L79.231,135L80.467,135L81.703,135L82.94,135L84.176,135L85.412,135L86.648,135L87.885,135L89.121,135L90.357,135L91.593,135L92.83,135L94.066,135L95.302,135L96.538,135L97.775,135L99.011,135L100.247,135L101.484,135L102.72,135L103.956,135L105.192,135L106.429,135L107.665,135L108.901,135L110.137,135L111.374,135L112.61,135L113.846,135L115.082,135L116.319,135L117.555,135L118.791,135L120.027,135L121.264,135L122.5,135L123.736,135L124.973,135L126.209,135L127.445,135L128.681,135L129.918,135L131.154,135L132.39,135L133.626,135L134.863,135L136.099,135L137.335,135L138.571,135L139.808,135L141.044,135L142.28,135L143.516,135L144.753,135L145.989,135L147.225,135L148.462,135L149.698,135L150.934,135L152.17,135L153.407,135L154.643,135L155.879,135L157.115,135L158.352,135L159.588,135L160.824,135L162.06,135L163.297,135L164.533,135L165.769,135L167.005,135L168.242,135L169.478,135L170.714,135L171.951,135L173.187,135L174.423,135L175.659,135L176.896,135L178.132,135L179.368,135L180.604,135L181.841,135L183.077,135L184.313,135L185.549,135L186.786,135L188.022,135L189.258,135L190.495,135L191.731,135L192.967,135L194.203,135L195.44,135L196.676,135L197.912,135L199.148,135L200.385,135L201.621,135L202.857,135L204.093,135L205.33,135L206.566,135L207.802,135L209.038,135L210.275,135L211.511,135L212.747,135L213.984,135L215.22,135L216.456,135L217.692,135L218.929,135L220.165,135L221.401,135L222.637,135L223.874,135L225.11,135L226.346,135L227.582,135L228.819,135L230.055,135L231.291,135L232.527,135L233.764,135L235,135L236.236,135L237.473,135L238.709,135L239.945,135L241.181,135L242.418,135L243.654,135L244.89,135L246.126,135L247.363,135L248.599,135L249.835,135L251.071,135L252.308,135L253.544,135L254.78,135L256.016,135L257.253,135L258.489,135L259.725,135L260.962,135L262.198,135L263.434,135L264.67,135L265.907,135L267.143,135L268.379,135L269.615,135L270.852,135L272.088,135L273.324,135L274.56,135L275.797,135L277.033,135L278.269,135L279.505,135L280.742,135L281.978,135L283.214,135L284.451,135L285.687,135L286.923,135L288.159,135L289.396,135L290.632,135L291.868,135L293.104,135L294.341,135L295.577,135L296.813,135L298.049,135L299.286,135L300.522,135L301.758,135L302.995,135L304.231,135L305.467,135L306.703,135L307.94,135L309.176,135L310.412,135L311.648,135L312.885,135L314.121,135L315.357,135L316.593,135L317.83,135L319.066,135L320.302,135L321.538,135L322.775,135L324.011,135L325.247,135L326.484,135L327.72,135L328.956,135L330.192,135L331.429,135L332.665,135L333.901,135L335.137,135L336.374,135L337.61,135L338.846,135L340.082,135L341.319,135L342.555,135L343.791,135L345.027,135L346.264,135L347.5,135L348.736,135L349.973,135L351.209,135L352.445,135L353.681,135L354.918,135L356.154,135L357.39,135L358.626,135L359.863,135L361.099,135L362.335,135L363.571,135L364.808,135L366.044,135L367.28,135L368.516,135L369.753,135L370.989,135L372.225,135L373.462,135L374.698,135L375.934,135L377.17,135L378.407,135L379.643,135L380.879,135L382.115,135L383.352,135L384.588,135L385.824,135L387.06,135L388.297,135L389.533,135L390.769,135L392.005,135L393.242,135L394.478,135L395.714,135L396.951,135L398.187,135L399.423,135L400.659,135L401.896,135L403.132,135L404.368,135L405.604,135L406.841,135L408.077,135L409.313,135L410.549,135L411.786,135L413.022,135L414.258,135L415.495,135L416.731,135L417.967,135L419.203,135L420.44,135L421.676,135L422.912,135L424.148,135L425.385,135L426.621,135L427.857,135L429.093,135L430.33,135L431.566,135L432.802,135L434.038,135L435.275,135L436.511,135L437.747,135L438.984,135L440.22,135L441.456,135L442.692,135L443.929,135L445.165,135L446.401,135L447.637,135L448.874,135L450.11,135L451.346,135L452.582,135L453.819,135L455.055,135L456.291,135L457.527,135L458.764,135L460,135L460,135L458.764,135L457.527,135L456.291,135L455.055,135L453.819,135L452.582,135L451.346,135L450.11,135L448.874,135L447.637,135L446.401,135L445.165,135L443.929,135L442.692,135L441.456,135L440.22,135L438.984,135L437.747,135L436.511,135L435.275,135L434.038,135L432.802,135L431.566,135L430.33,135L429.093,135L427.857,135L426.621,135L425.385,135L424.148,135L422.912,135L421.676,135L420.44,135L419.203,135L417.967,135L416.731,135L415.495,135L414.258,135L413.022,135L411.786,135L410.549,135L409.313,135L408.077,135L406.841,135L405.604,135L404.368,135L403.132,135L401.896,135L400.659,135L399.423,135L398.187,135L396.951,135L395.714,135L394.478,135L393.242,135L392.005,135L390.769,135L389.533,135L388.297,135L387.06,135L385.824,135L384.588,135L383.352,135L382.115,135L380.879,135L379.643,135L378.407,135L377.17,135L375.934,135L374.698,135L373.462,135L372.225,135L370.989,135L369.753,135L368.516,135L367.28,135L366.044,135L364.808,135L363.571,135L362.335,135L361.099,135L359.863,135L358.626,135L357.39,135L356.154,135L354.918,135L353.681,135L352.445,135L351.209,135L349.973,135L348.736,135L347.5,135L346.264,135L345.027,135L343.791,135L342.555,135L341.319,135L340.082,135L338.846,135L337.61,135L336.374,135L335.137,135L333.901,135L332.665,135L331.429,135L330.192,135L328.956,135L327.72,135L326.484,135L325.247,135L324.011,135L322.775,135L321.538,135L320.302,135L319.066,135L317.83,135L316.593,135L315.357,135L314.121,135L312.885,135L311.648,135L310.412,135L309.176,135L307.94,135L306.703,135L305.467,135L304.231,135L302.995,135L301.758,135L300.522,135L299.286,135L298.049,135L296.813,135L295.577,135L294.341,135L293.104,135L291.868,135L290.632,135L289.396,135L288.159,135L286.923,135L285.687,135L284.451,135L283.214,135L281.978,135L280.742,135L279.505,135L278.269,135L277.033,135L275.797,135L274.56,135L273.324,135L272.088,135L270.852,135L269.615,135L268.379,135L267.143,135L265.907,135L264.67,135L263.434,135L262.198,135L260.962,135L259.725,135L258.489,135L257.253,135L256.016,135L254.78,135L253.544,135L252.308,135L251.071,135L249.835,135L248.599,135L247.363,135L246.126,135L244.89,135L243.654,135L242.418,135L241.181,135L239.945,135L238.709,135L237.473,135L236.236,135L235,135L233.764,135L232.527,135L231.291,135L230.055,135L228.819,135L227.582,135L226.346,135L225.11,135L223.874,135L222.637,135L221.401,135L220.165,135L218.929,135L217.692,135L216.456,135L215.22,135L213.984,135L212.747,135L211.511,135L210.275,135L209.038,135L207.802,135L206.566,135L205.33,135L204.093,135L202.857,135L201.621,135L200.385,135L199.148,135L197.912,135L196.676,135L195.44,135L194.203,135L192.967,135L191.731,135L190.495,135L189.258,135L188.022,135L186.786,135L185.549,135L184.313,135L183.077,135L181.841,135L180.604,135L179.368,135L178.132,135L176.896,135L175.659,135L174.423,135L173.187,135L171.951,135L170.714,135L169.478,135L168.242,135L167.005,135L165.769,135L164.533,135L163.297,135L162.06,135L160.824,135L159.588,135L158.352,135L157.115,135L155.879,135L154.643,135L153.407,135L152.17,135L150.934,135L149.698,135L148.462,135L147.225,135L145.989,135L144.753,135L143.516,135L142.28,135L141.044,135L139.808,135L138.571,135L137.335,135L136.099,135L134.863,135L133.626,135L132.39,135L131.154,135L129.918,135L128.681,135L127.445,135L126.209,135L124.973,135L123.736,135L122.5,135L121.264,135L120.027,135L118.791,135L117.555,135L116.319,135L115.082,135L113.846,135L112.61,135L111.374,135L110.137,135L108.901,135L107.665,135L106.429,135L105.192,135L103.956,135L102.72,135L101.484,135L100.247,135L99.011,135L97.775,135L96.538,135L95.302,135L94.066,135L92.83,135L91.593,135L90.357,135L89.121,135L87.885,135L86.648,135L85.412,135L84.176,135L82.94,135L81.703,135L80.467,135L79.231,135L77.995,135L76.758,135L75.522,135L74.286,135L73.049,135L71.813,135L70.577,135L69.341,135L68.104,135L66.868,135L65.632,135L64.396,135L63.159,135L61.923,135L60.687,135L59.451,135L58.214,135L56.978,135L55.742,135L54.505,135L53.269,135L52.033,135L50.797,135L49.56,135L48.324,135L47.088,135L45.852,135L44.615,135L43.379,135L42.143,135L40.907,135L39.67,135L38.434,135L37.198,135L35.962,135L34.725,135L33.489,135L32.253,135L31.016,135L29.78,135L28.544,135L27.308,135L26.071,135L24.835,135L23.599,135L22.363,135L21.126,135L19.89,135L18.654,135L17.418,135L16.181,135L14.945,135L13.709,135L12.473,135L11.236,135L10,135Z" fill="rgba(88, 166, 255, .1)"/><g><circle transform="translate(10,10)" cx="10" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="48.324175824175825" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="85.41208791208791" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="123.73626373626374" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="162.06043956043956" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="199.14835164835165" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="237.47252747252747" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="274.5604395604396" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="312.8846153846154" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="351.2087912087912" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="385.8241758241758" cy="135" r="2" fill="#106cbc"/><circle transform="translate(10,10)" cx="424.14835164835165" cy="135" r="2" fill="#106cbc"/></g><g fill="currentColor" text-anchor="middle" font-family="sans-serif" font-size="10" stroke="rgba(88, 166, 255, .05)" stroke-linejoin="round" stroke-width="4" paint-order="stroke fill"><text transform="translate(10,6)" x="10" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="48.324175824175825" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="85.41208791208791" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="123.73626373626374" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="162.06043956043956" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="199.14835164835165" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="237.47252747252747" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="274.5604395604396" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="312.8846153846154" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="351.2087912087912" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="385.8241758241758" y="135" fill="rgba(127, 127, 127, .8)">0</text><text transform="translate(10,6)" x="424.14835164835165" y="135" fill="rgba(127, 127, 127, .8)">0</text></g></svg>
+            
+          </section>
+        </div>
+      
+      
+    
+  </section>
+
+      
+        
+      
+        
+
+      
+        
+      
+        
+
+
+
+      
+        
+      
+        
+      
+        
+
+      
+        
+
+      
+        
+
+      
+        
+      
+        
+
+      
+        
+
+      
+        
+
+      
+        
+      
+        
+
+      
+        
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+
+      
+
+      
+
+    </div>
+    <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
+  </foreignObject>
+
+</svg>
