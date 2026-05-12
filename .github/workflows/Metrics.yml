@@ -18,12 +18,23 @@ jobs:
 
     permissions:
       contents: write
+      packages: read
 
     steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify Metrics prebuilt image
+        run: docker pull ghcr.io/lowlighter/metrics:v3.34
+
       # METRICS_TOKEN should be a personal access token with enough read scopes
       # for private repositories, organizations, traffic, and projects if enabled.
       - name: Profile overview metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -32,6 +43,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_isocalendar: yes
@@ -57,7 +69,7 @@ jobs:
           plugin_repositories_order: pinned, starred
 
       - name: Language activity metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -66,6 +78,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_languages: yes
@@ -78,7 +91,7 @@ jobs:
           plugin_languages_threshold: 0%
 
       - name: Contribution calendar metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -87,13 +100,14 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_calendar: yes
           plugin_calendar_limit: 2
 
       - name: Lines changed metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -102,6 +116,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_lines: yes
@@ -111,7 +126,7 @@ jobs:
           plugin_lines_delay: 30
 
       - name: Stargazers metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -120,6 +135,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_stargazers: yes
@@ -128,7 +144,7 @@ jobs:
           plugin_stargazers_charts_type: graph
 
       - name: Starred topics metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: NOT_NEEDED
           user: Eliminater74
@@ -137,6 +153,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_topics: yes
@@ -145,7 +162,7 @@ jobs:
           plugin_topics_limit: 20
 
       - name: Follow-up metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -154,6 +171,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_followup: yes
@@ -162,7 +180,7 @@ jobs:
           plugin_followup_archived: no
 
       - name: Reactions metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -171,6 +189,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_reactions: yes
@@ -182,7 +201,7 @@ jobs:
           plugin_reactions_details: count, percentage
 
       - name: Notable contribution metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -191,6 +210,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_notable: yes
@@ -200,7 +220,7 @@ jobs:
           plugin_notable_self: yes
 
       - name: People metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -209,6 +229,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_people: yes
@@ -217,7 +238,7 @@ jobs:
           plugin_people_size: 28
 
       - name: Recently starred repositories metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -226,13 +247,14 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_stars: yes
           plugin_stars_limit: 6
 
       - name: Star lists metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: NOT_NEEDED
           user: Eliminater74
@@ -241,6 +263,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_starlists: yes
@@ -250,7 +273,7 @@ jobs:
           plugin_starlists_limit_languages: 8
 
       - name: Discussions metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -259,6 +282,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_discussions: yes
@@ -266,7 +290,7 @@ jobs:
           plugin_discussions_categories_limit: 8
 
       - name: Gists metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -275,12 +299,13 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_gists: yes
 
       - name: Repository traffic metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: Eliminater74
@@ -289,12 +314,13 @@ jobs:
           base: repositories
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_traffic: yes
 
       - name: Skyline metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           token: NOT_NEEDED
           user: Eliminater74
@@ -303,6 +329,7 @@ jobs:
           base: ""
           config_timezone: America/New_York
           optimize: yes
+          use_prebuilt_image: yes
           plugins_errors_fatal: no
 
           plugin_skyline: yes
