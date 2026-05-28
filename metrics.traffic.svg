@@ -274,7 +274,7 @@
         </div>
       </div>
 
-<pre><div class="stdin"><span class="ps1-path">eliminater74@metrics</span>:<span class="ps1-location">~</span># ls -lh github/repositories</div><div class="stdout">Total 292 repositories - 17.6 GB
+<pre><div class="stdin"><span class="ps1-path">eliminater74@metrics</span>:<span class="ps1-location">~</span># ls -lh github/repositories</div><div class="stdout">Total 295 repositories - 17.6 GB
 ----  <b>     </b>  views <span class="error">(Insufficient token scopes)</span>
 -r--  <b>    0</b>  stargazers
 -r--  <b>    0</b>  forks
