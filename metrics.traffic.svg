@@ -275,7 +275,7 @@
       </div>
 
 <pre><div class="stdin"><span class="ps1-path">eliminater74@metrics</span>:<span class="ps1-location">~</span># ls -lh github/repositories</div><div class="stdout">Total 308 repositories - 18.1 GB
--r--  <b>  955</b>  views
+-r--  <b>  920</b>  views
 -r--  <b>  119</b>  stargazers
 -r--  <b>   56</b>  forks
 -r--  <b>   71</b>  watchers
